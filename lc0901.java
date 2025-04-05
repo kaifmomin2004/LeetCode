@@ -27,7 +27,6 @@
 
 import java.util.*;
 
-
 public class lc0901 {
     public static void main(String[] args) {
         int[] arr = { 100, 80, 60, 70, 60, 75, 85 };
@@ -40,7 +39,7 @@ public class lc0901 {
 }
 
 class StockSpanner {
-    Stack<int[]> st=new Stack<>();
+    java.util.Stack<int[]> st = new java.util.Stack<>();
 
     public int next(int price) {
         int day=1;
