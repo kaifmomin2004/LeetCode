@@ -17,14 +17,19 @@ public class lc0503 {
     }
 
     public static int[] nextGreaterElements(int[] nums) {
-        int[] result = new int[nums.length];
+        int n = nums.length;
+        int[] result = new int[n];
         Stack<Integer> st = new Stack<>();
-        for (int i = 0; i < nums.length; i++) {
-            while (!st.isEmpty() && nums[st.peek()] < nums[i]) {
+        for (int i = 0; i < 2 * n; i++) {
+            int curr = nums[i % n];
+            while (!st.isEmpty() && nums[st.peek()] < curr) {
                 // int prev = st.pop();
-                result[st.pop()] = nums[i];
+                result[st.pop()] = curr;
             }
-            st.push(i);
+            if (i < n) {
+                result[i] = -1;
+                st.push(i);
+            }
         }
         return result;
     }
