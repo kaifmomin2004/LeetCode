@@ -4,8 +4,6 @@
 // Input: nums = [3,2,3]
 // Output: 3
 
-import java.util.Arrays;
-
 public class lc0169 {
     public static void main(String[] args) {
         int[] nums = { 2, 2, 1, 1, 1, 1, 2 };
@@ -19,11 +17,6 @@ public class lc0169 {
             if (count == 0)
                 candidate = num;
             count += (num == candidate) ? 1 : -1;
-
-            // if (num == candidate)
-            //     count++;
-            // else
-            //     count--;
         }
 
         return candidate;
