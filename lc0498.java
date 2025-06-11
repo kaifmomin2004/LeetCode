@@ -43,22 +43,21 @@ public class lc0498 {
         int[] ans = new int[n * m];
         int idx = 0;
         while (idx < ans.length) {
-            while (i >= 0 && j < m) {
-                System.out.println(Arrays.toString(ans));
+            while (i >= 0 && j < m)
                 ans[idx++] = mat[i--][j++];
-            }
+
             if (j >= m) {
                 j = m - 1;
-                i+=2;
+                i += 2;
             } else
                 i = 0;
-            while (i < n && j >= 0) {
-                System.out.println(Arrays.toString(ans));
+
+            while (i < n && j >= 0)
                 ans[idx++] = mat[i++][j--];
-            }
+
             if (i >= n) {
                 i = n - 1;
-                j+=2;
+                j += 2;
             } else
                 j = 0;
         }
